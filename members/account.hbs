@@ -10,35 +10,32 @@
 
         {{!-- Logged in, paying member: Show account info --}}
         <div class="subscriber-box">
-
-            {{#foreach @member.subscriptions}}
-                <div class="subscription">
-                    <div class="subscriber-header">
-                        <div class="subscription-title">
-                            {{#if @first}}
-                                <h1>Your account</h1>
-                            {{/if}}
-                            <p>
-                                Hey! You have an active <strong>{{@site.title}}</strong> account with access to all areas. Get in touch if have any problems or need some help getting things updated, and thanks for being a member.
-                            </p>
-                        </div>
+            <div class="subscription">
+                <div class="subscriber-header">
+                    <div class="subscription-title">
                         {{#if @first}}
-                            <div class="subscriber-avatar">
-                                {{> "icons/avatar"}}
-                                {{#if @member.avatar_image}}
-                                    <img src="{{@member.avatar_image}}" />
-                                {{/if}}
-                            </div>
+                            <h1>Your account</h1>
                         {{/if}}
+                        <p>
+                            Hey! You have an active <strong>{{@site.title}}</strong> account with access to all areas. Get in touch if have any problems or need some help getting things updated, and thanks for being a member.
+                        </p>
                     </div>
-                    <div class="subscriber-details">
-                        <div class="subscriber-detail">
-                            <label class="subscriber-detail-label">Email address</label>
-                            <span class="subscriber-detail-content">{{@member.email}}</span>
+                    {{#if @first}}
+                        <div class="subscriber-avatar">
+                            {{> "icons/avatar"}}
+                            {{#if @member.avatar_image}                                  
+                                <img src="{{@member.avatar_image}}" />
+                            {{/if}}
                         </div>
+                    {{/if}}
+                </div>
+                <div class="subscriber-details">
+                    <div class="subscriber-detail">
+                        <label class="subscriber-detail-label">Email address</label>
+                        <span class="subscriber-detail-content">{{@member.email}}</span>
                     </div>
                 </div>
-            {{/foreach}}
+            </div>
         </div>
 
     {{else}}
