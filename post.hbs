@@ -88,13 +88,19 @@ into the {body} of the default.hbs template --}}
                 <section class="post-full-content">
                     <div class="post-content">
                         {{content}}
+                        {{#if @member}}
+                            <h2>Thanks for being a member of</h2>
+                            {{#if @site.logo}}
+                                <img src="{{@site.logo}}" alt="{{@site.title}}" />
+                            {{else}}
+                                <h1>{{@site.title}}</h1>
+                            {{/if}}
+                        {{else}}
+                            {{subscribe_form}}
+                        {{/if}}
                     </div>
                 </section>
-                {{#if @member}}
-                    <h1>Thanks for being a member of The Product Papers!</h1>
-                {{else}}
-                    {{subscribe_form}}
-                {{/if}}
+
             {{else}}
             {{!-- if the user does not have access, show them an upgrade CTA --}}
 
