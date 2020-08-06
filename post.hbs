@@ -101,9 +101,7 @@ into the {body} of the default.hbs template --}}
 
                 <section class="post-full-content">
                     <div class="post-content">
-                        <p>You don't have access to this post on <strong>{{@site.title}}</strong> at the moment, but if you upgrade your account you'll be able to see the whole thing, as well as all the other posts in the archive!</p>
-                        <br/>
-                        <p>Subscribing is <strong>completely free</strong>, only takes a few seconds, and will give you immediate access.</p>
+                        <p>Become a member of {{@site.title}} for <strong>free</strong> to get immediate access to this post and the entire archive of {{@site.title}}!</p>                
                     </div>
                     <aside class="post-upgrade-cta">
                         <div class="post-upgrade-cta-content">
@@ -112,7 +110,7 @@ into the {body} of the default.hbs template --}}
                             {{else}}
                             <h2>This post is for members only</h2>
                             {{/if}}
-                            <a class="button large primary" href="/signup/">Subscribe for free now</a>
+                            <a class="button large primary" href="/signup/">Join {{@site.title}}</a>
                             <p><small>Already have an account? <a href="/signin/">Sign in</a></small></p>
                         </div>
                     </aside>
