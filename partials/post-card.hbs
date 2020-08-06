@@ -22,10 +22,8 @@
 
             <header class="post-card-header">
                 <div class="post-card-header-tags">
-                {{#has visibility="public"}}
-                    <span class="post-visibility post-visibility-{{visibility}} premium-label">Public</span>    
-                {{else}}
-                    <span class="post-visibility">Members-Only</span>
+                {{#has visibility="members"}}
+                    <span class="post-visibility premium-label">Members-Only</span>
                 {{/has}}
                 {{#if primary_tag}}
                     {{#primary_tag}}
