@@ -16,9 +16,13 @@
         {{!-- Logged in, not paying: Check out --}}
         <div class="checkout-form">
             <h1>Welcome to</h1>
-            <h1>The Product Papers! 📄</h1>
+            {{#if @site.logo}}
+                <img src="{{@site.logo}}" alt="{{@site.title}}" />
+            {{else}}
+                <h1>{{@site.title}}</h1>
+            {{/if}}
             <p>As a part of your membership, you now have access to the entire archive of papers as well as all future 🔐Members-Only posts.</p>
-            <p>If you have a minute, I’d love to hear about why you subscribed and what about The Product Papers makes you most excited. You can get in touch with me on Twitter <a href="https://twitter.com/tylerwince">@tylerwince</a> or via email <a href="mailto:tylerwince@gmail.com">tylerwince@gmail.com</a>.</p>
+            <p>If you have a minute, I’d love to hear about why you subscribed and what about {{@site.title}} makes you most excited. You can get in touch with me on Twitter <a href="https://twitter.com/tylerwince">@tylerwince</a> or via email <a href="mailto:tylerwince@gmail.com">tylerwince@gmail.com</a>.</p>
         </div>
 
     {{else}}
