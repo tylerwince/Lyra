@@ -10,8 +10,6 @@
 
         {{!-- Logged in, paying member: Show account info --}}
         <div class="subscriber-box">
-
-            {{#foreach @member.subscriptions}}
                 <div class="subscription">
                     <div class="subscriber-header">
                         <div class="subscription-title">
@@ -73,7 +71,6 @@
                         <li>{{cancel_link}}</li>
                     </ul>
                 </div>
-            {{/foreach}}
         </div>
 
     {{else}}
