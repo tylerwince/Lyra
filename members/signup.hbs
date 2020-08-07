@@ -29,7 +29,12 @@
 
         {{!-- Not logged in: Sign up --}}
         <form class="signup-form" data-members-form="signup">
-            <h1 class="signup-title">Signup to {{@site.title}}</h1>
+            <h1 class="signup-title">Signup to</h1>
+            {{#if @site.logo}}
+                <img src="{{@site.logo}}" alt="{{@site.title}}" />
+            {{else}}
+                <h1>{{@site.title}}</h1>
+            {{/if}}
             <p>{{@site.description}}</p>
             <div class="signup-box">
                 <input data-members-email type="email" placeholder="Type your email..." required="true" autocomplete="false" />
