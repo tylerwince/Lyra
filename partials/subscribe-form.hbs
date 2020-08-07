@@ -1,5 +1,10 @@
 <section class="subscribe-form">
-    <h3 class="subscribe-form-title">Subscribe to {{@site.title}}</h3>
+    <h3 class="subscribe-form-title">Subscribe to</h3>
+    {{#if @site.logo}}
+        <img src="{{@site.logo}}" alt="{{@site.title}}" />
+    {{else}}
+        <h1>{{@site.title}}</h1>
+    {{/if}}
     <p class="subscribe-form-description">Get the latest posts delivered right to your inbox</p>
     <form data-members-form="subscribe">
         <div class="form-group">
